@@ -130,3 +130,5 @@ dmypy.json
 
 package-note
 raw/
+models/
+processed
