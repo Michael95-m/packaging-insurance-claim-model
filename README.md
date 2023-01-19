@@ -1,1 +1,1 @@
-# deploy-insurance-claim-model
+# Packaging insurance claim-model
