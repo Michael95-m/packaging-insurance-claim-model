@@ -1,0 +1,9 @@
+pandas
+scikit-learn
+numpy
+tqdm
+feature-engine
+pydantic
+tox
+PyYAML
+types-PyYAML
