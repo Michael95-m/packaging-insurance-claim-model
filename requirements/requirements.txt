@@ -7,3 +7,5 @@ pydantic
 tox
 PyYAML
 types-PyYAML
+setuptools
+wheel

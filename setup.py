@@ -7,11 +7,13 @@ from setuptools import find_packages, setup
 
 # Package meta-data.
 NAME = 'insurance-claim-model'
-DESCRIPTION = "Regression model package for insurance claim model from kaggle"
+DESCRIPTION = "Insurance claim regression model package from kaggle dataset"
 URL = "https://github.com/Michael95-m/packaging-insurance-claim-model"
 EMAIL = "minkhantmgmg.mk19@gmail.com"
 AUTHOR = "min-khant"
-REQUIRES_PYTHON = ">=3.6.0"
+REQUIRES_PYTHON = ">=3.7.0"
+
+
 
 long_description = DESCRIPTION
 
@@ -42,7 +44,7 @@ setup(
     python_requires=REQUIRES_PYTHON,
     url=URL,
     packages=find_packages(exclude=("tests",)),
-    package_data={"regression_model": ["VERSION"]},
+    package_data={"insurance_claim_model": ["VERSION"]},
     install_requires=list_reqs(),
     extras_require={},
     include_package_data=True,
@@ -53,10 +55,11 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
         "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
         "Programming Language :: Python :: Implementation :: CPython",
         "Programming Language :: Python :: Implementation :: PyPy",
     ],
