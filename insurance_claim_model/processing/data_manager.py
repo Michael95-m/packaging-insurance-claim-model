@@ -7,17 +7,15 @@ import pandas as pd
 from sklearn.pipeline import Pipeline
 
 from insurance_claim_model import __version__
-from insurance_claim_model.config.core import DATASET_DIR, TRAINED_MODEL_DIR, config
+from insurance_claim_model.config.core import TRAINED_MODEL_DIR, config
 
 
-def load_dataset(*, file_name: str) -> pd.DataFrame:
+def load_dataset(*, file_name: Path) -> pd.DataFrame:
 
-    training_path = DATASET_DIR / file_name
+    data = pd.read_csv(file_name)
+    data.drop(["index", "PatientID"], axis=1, inplace=True)
 
-    transformed = pd.read_csv(training_path)
-    transformed.drop(["index", "PatientID"], axis=1, inplace=True)
-
-    return transformed
+    return data
 
 
 def save_pipeline(*, pipeline: Pipeline) -> None:

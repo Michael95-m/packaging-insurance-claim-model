@@ -11,18 +11,21 @@ predict_pipe = Pipeline(
         (
             "frequent_imputation",
             CategoricalImputer(
-                imputation_method="frequent", variables=config.model_config.cat_na
+                imputation_method="frequent",
+                variables=config.model_config.categorical_na,
             ),
         ),
         (
             "mean_imputation",
             MeanMedianImputer(
-                imputation_method="mean", variables=config.model_config.num_na
+                imputation_method="mean", variables=config.model_config.numerical_na
             ),
         ),
         (
             "categorical_encoder",
-            OneHotEncoder(drop_last=True, variables=config.model_config.cat_vars),
+            OneHotEncoder(
+                drop_last=True, variables=config.model_config.categorical_vars
+            ),
         ),
         ("scaler", MinMaxScaler()),
         (

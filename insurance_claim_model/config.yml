@@ -4,19 +4,29 @@ training_data_file:  insurance_data.csv
 testing_data_file: test.csv
 pipeline_save_file: insurance-model
 
-cat_na:
+categorical_na:
   - region
 
-num_na:
+numerical_na:
   - age 
 
-cat_vars:
+categorical_vars:
   - gender
   - diabetic
   - smoker
   - region
 
-num_vars:
+numerical_vars:
+  - age
+  - bmi
+  - bloodpressure
+  - children
+
+features:
+  - gender
+  - diabetic
+  - smoker
+  - region
   - age
   - bmi
   - bloodpressure

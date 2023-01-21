@@ -23,10 +23,11 @@ class AppConfig(BaseModel):
 
 class ModelConfig(BaseModel):
 
-    cat_na: List[str]
-    num_na: List[str]
-    cat_vars: List[str]
-    num_vars: List[str]
+    categorical_na: List[str]
+    numerical_na: List[str]
+    categorical_vars: List[str]
+    numerical_vars: List[str]
+    features: List[str]
     drop_columns: List[str]
     target: str
     test_size: float
