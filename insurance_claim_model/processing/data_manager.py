@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-from typing import List, Text
+from typing import List
 
 import joblib
 import pandas as pd
@@ -10,7 +10,7 @@ from insurance_claim_model import __version__
 from insurance_claim_model.config.core import DATASET_DIR, TRAINED_MODEL_DIR, config
 
 
-def load_dataset(*, file_name: Text) -> pd.DataFrame:
+def load_dataset(*, file_name: str) -> pd.DataFrame:
 
     training_path = DATASET_DIR / file_name
 
@@ -29,7 +29,7 @@ def save_pipeline(*, pipeline: Pipeline) -> None:
     joblib.dump(pipeline, pipeline_to_persist)
 
 
-def load_pipeline(*, pipeline_save_file: Text) -> Pipeline:
+def load_pipeline(*, pipeline_save_file: str) -> Pipeline:
 
     pipeline_path = TRAINED_MODEL_DIR / pipeline_save_file
     pipeline = joblib.load(pipeline_path)
@@ -37,7 +37,7 @@ def load_pipeline(*, pipeline_save_file: Text) -> Pipeline:
     return pipeline
 
 
-def remove_old_pipeline(*, files_to_keep: List[Text]) -> None:
+def remove_old_pipeline(*, files_to_keep: List[str]) -> None:
 
     files_to_keep = files_to_keep + ["__init__.py"]
     for file in os.listdir(TRAINED_MODEL_DIR):
