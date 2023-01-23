@@ -16,7 +16,7 @@ Actually I didn't give much time to EDA and feature engineering parts because I 
 
     You can see **MANIFEST.in**, **pyproject.toml** and **setup.py** which are essential for python packaging.
 
-The steps I make for this repo is that at first, I make EDA and modeling notebook. From these notebooks, I create the python files(.py). Then I carefully structure these codes, check the code quality with pytest and finally make the python package which can installed with pip. You can see my python package in [here](https://pypi.org/project/insurance-claim-model/).
+The steps I make for this repo is that at first, I make EDA and modeling notebook. From these notebooks, I create the python files(.py). Then make the python package which can installed with pip. You can see my python package in [here](https://pypi.org/project/insurance-claim-model/).
 
 ## About Dataset
 
